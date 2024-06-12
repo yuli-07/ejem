@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1>Metodo Cramer</h1><br>
+a1*1+b1y1=c1<br>
+	a2*2+b2y2=c2<br>
+	<p>favor de capturar los valores  </p><br>
+	<input type="number" name="" placeholder="a1" id = "a1">x1+
+	<input type="number" name="" placeholder="b1" id = "b1">y1=
+	<input type="number" name="" placeholder="c1" id="c1">
+	<br>
+<input type="number" name="" placeholder="a2" id="a2">x1
+<input type="number" name="" placeholder="b2" id = "b2">
+<input type="number" name="" placeholder="c2" id = "c2">
+<br>
+<button onclick="solue()">resolver</button>
+<p>
+x=<input type="text" name="" id="x-result">
+	</p>
+	<p>
+y=<input type="text" name="" id="y-result">
+	</p>
+	<script> 
+function solue(){
+
+	const a1= parseFloat(document.getElementById('a1').value);
+	const b1= parseFloat(document.getElementById('b1').value);
+	const c1= parseFloat(document.getElementById('c1').value);
+	const a2= parseFloat(document.getElementById('a2').value);
+	const b2= parseFloat(document.getElementById('b2').value);
+	const c2= parseFloat(document.getElementById('c2').value);
+	const d= a1*b2-a2*b1;
+	const dx=c1*b2-a2*b1;
+	const dy=a1*c2-a2*c1;
+	if (d = = = 0) {
+		document.getElementById('x-result'.value='NO HAY SOLUCION UNICA');
+		document.getElementById('y-result'.value='NO HAY SOLUCION UNICA');
+	}else{
+		const x = dx/d;
+		const y = dy/d;
+		document.getElementById('x-result').value = x;
+		document.getElementById('y-result').value = y;
+	}
+}
+</script>
+</form>
+</body>
+</html>
